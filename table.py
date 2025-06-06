@@ -43,13 +43,13 @@ class Table :
 
     """this one says there's a free spot"""
     def has_free_spot(self) :
-        if self.left_capacity < 4 :
+        if self.left_capacity < self.capacity :
             return True
         else :
             return False
     
     # This one allow put a name in the list seats. 
     def assign_seat(self,name) :
-        self.assign_seat = self.seats.append(name)
+        self.assign_seat = self.seats(name)
 
     
