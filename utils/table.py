@@ -24,12 +24,14 @@ class Seat :
 
 
 class Table :
-    #we define the attributes and their types
+    """we define the attributes and their types, in here, the capacity depends on how many seats are available, the seats value has to be 
+    a list that refers to the class Seat"""
     def __init__(self, capacity : int, seats):
         self.capacity = capacity
         self.seats = seats
         #we set the list with four seats
 
+    """we put a string function for a human comprehension of the attributes"""
     def __str__(self):
         return "The capacity of the table is {self.capacity} and {self.seats} in it".format(self=self)
 
@@ -38,10 +40,10 @@ class Table :
     def left_capacity(self) : 
         if len(self.seats) > self.capacity :
             raise ValueError
-            print("Table is full")
-        else : self.left_capacity = self.capacity - len(self.seats)
+        else : 
+            return self.left_capacity = self.capacity - len(self.seats)
 
-    """this one says there's a free spot"""
+    """this one says there's a free spot. It goes back to result of left_capacity. If left_capacity if it is """
     def has_free_spot(self) :
         if self.left_capacity < self.capacity :
             return True
