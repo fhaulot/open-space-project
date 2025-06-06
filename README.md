@@ -3,16 +3,15 @@
 ## Description
 
 The project is about randomly assign seats to a classroom and switch them everyday, this way classmates from Bouman9 will get to know each others!
-For this, we extract the data from a csv file with names in it and call them to assign seat from the Class Seat
 
 ## Installation
-You'll only a .py and .csv to run the program
-Get o
+
+Run the main.py to have new places for the class everyday!
 
 ## Usage
-First go an 
-## Contributors
 
-(Timeline)
-(Personal situation)
-For this, we extract the data from a csv file with names in it and call them to assign seat from the Class Seat
+Let's see wath the code in main.py do
+ 1. We extract names in "utils\__pycache__\openspace.cpython-313.pyc"
+ 2. The "openspace.py" will see how many seats and tables are available in "table.py" 
+ 3. The "table.py" will return if seats are empty or full.
+
