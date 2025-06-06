@@ -8,7 +8,7 @@ class Seat :
     def __init__(self, free : bool, occupant : str) :
         self.free = free
         self.occupant = occupant
-        
+    """we put a string function for a human comprehension of the attributes"""     
     def __str__(self):
         return "The seast is {self.free} and it is not free there's {self.occupant}in it".format(self=self)
     #we see if the seat is available and put somebody on it if free
@@ -41,7 +41,7 @@ class Table :
         if len(self.seats) > self.capacity :
             raise ValueError
         else : 
-            return self.left_capacity = self.capacity - len(self.seats)
+            return self.left_capacity == self.capacity - len(self.seats)
 
     """this one says there's a free spot. It goes back to result of left_capacity. If left_capacity if it is """
     def has_free_spot(self) :

@@ -1,6 +1,6 @@
 import random
 import pandas as pd
-
+from utils.table import Table
 class Openspace:
 
     def __init__(self, tables):
@@ -14,7 +14,7 @@ class Openspace:
 
          for n in names:
                for t in self.tables:
-                    table.assign_seat(n)
+                    Table.assign_seat(n)
   
 
 
