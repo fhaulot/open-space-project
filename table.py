@@ -8,6 +8,7 @@ class Seat :
     def __init__(self, free : bool, occupant : str) :
         self.free = free
         self.occupant = occupant
+        
     def __str__(self):
         return "The seast is {self.free} and it is not free there's {self.occupant}in it".format(self=self)
     #we see if the seat is available and put somebody on it if free
@@ -15,11 +16,11 @@ class Seat :
         if self.free == True :
             self.occupant = name
             return self.free == False
-    #forget about this one!
+    #the idea is to remove all occupants with this formula
     def remove_occupant(self) :
         if self.free != True :
             return self.free == True
-
+    
 
 
 class Table :
@@ -27,19 +28,28 @@ class Table :
     def __init__(self, capacity : int, seats):
         self.capacity = capacity
         self.seats = seats
-        seats = []
-        for seat in capacity :
-            self.seats.append(seat)
+        #we set the list with four seats
 
-    #to see if a seat is available in the table
+    def __str__(self):
+        return "The capacity of the table is {self.capacity} and {self.seats} in it".format(self=self)
+
+    """to see if a seat is available in the table, first we count how many places are available on the table by counting the seats list.
+     with error message if the table is more than 4 """
+    def left_capacity(self) : 
+        if len(self.seats) > self.capacity :
+            raise ValueError
+            print("Table is full")
+        else : self.left_capacity = self.capacity - len(self.seats)
+
+    """this one says there's a free spot"""
     def has_free_spot(self) :
-        if len(self.seats) > 0 :
+        if self.left_capacity < 4 :
             return True
         else :
             return False
     
+    # This one allow put a name in the list seats. 
     def assign_seat(self,name) :
-        if self.has_free_spot(True) :
-            self.seats.
+        self.assign_seat = self.seats.append(name)
 
     
